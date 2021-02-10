@@ -5,7 +5,16 @@
   <meta charset="UTF-8"/>
 </head>
 <body>
- <script>
+<p>Hello, do you wanna play a game ?</p>
+
+<button id=bton>Click me.</button>
+
+<p id="demo"></p>
+
+</body>
+
+
+<script>
  
 //ask the human a choice
 function playRound(computerSelection, playerSelection) {
@@ -28,46 +37,51 @@ function playRound(computerSelection, playerSelection) {
 		// compare both of the choices
 
 				if (playerSelection === computerSelection) {
-					console.log("It's a draw !");
+					alert("It's a draw !");
 				}
 
 				else if (playerSelection === "rock" && computerSelection === "scissors") {
-					console.log("You Win !" );
+					alert("You Win !");
 				}
 
 				else if (playerSelection === "rock" && computerSelection === "paper") {
-					console.log("You Lose !");
+					alert("You Lose !");
 				}
 
 				else if (playerSelection === "paper" && computerSelection === "rock") {
-					console.log("You Win !");
+					alert("You Win !");
 				}
 
 				else if (playerSelection === "paper" && computerSelection === "Scissor") {
-					console.log("You Lose !");
+					alert("You Lose !");
 				}
 
 				else if (playerSelection === "Scissor" && computerSelection === "paper") {
-					console.log("You Win !");
+					alert("You Win !");
 				}
 				
 				else if (playerSelection === "Scissor" && computerSelection === "rock") {
-					console.log("You Lose !");
+					alert("You Lose !");
 				}
 				else {
-					console.log("Hey, told you to choose between these 3 values dude...");
+					alert("Hey, told you to choose between these 3 values dude...");
 				}
 		//}	
 
-		return(playRound)
+
 }
 
 function game() {
 	for (i=1; i < 6 ; i++) {
-		console.log(playRound())
+
+	playRound()
+
 	}	
 }
+
+document.getElementById("bton").onclick = function() {game()};
+
   </script>
-</body>
+
 </html>
 
